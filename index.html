@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh_cmn_Hans" class="background">
+<head>
+    <meta charset="utf-8">
+    <title>八五班班级网站</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+</head>
+<style>
+    :root {
+        --color-1: #e8ccd5;
+        --color-2: #beb9f2;
+        --text-color: #0b303b;
+    }
+    :root .dark {
+        --color-1: #332d2f;
+        --color-2: #202029;
+        --text-color: #d5ecf3;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    html, body {
+        height: 0;
+        min-height: 100vh;
+        margin: 0 0;
+        padding: 0 0;
+    }
+    html.background {
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-image: linear-gradient(to left top, var(--color-1) 0%, var(--color-2) 50%, var(--color-1) 100%, var(--color-2) 150%, var(--color-1) 200%);
+        background-repeat: repeat-y;
+        background-size:100% 600%;
+    }
+    .menu {
+        z-index: 100;
+        position: fixed;
+        background-color: #fef4ee35;
+        color: #000000;
+        font-family: Arial, sans-serif;
+        height: 80px;
+        width: 97%;
+        margin: 0 1% 10px 1%;
+        top: 20px;
+        padding: 10px 10px 10px 10px;
+        border-radius: 20px 20px 20px 20px;
+        backdrop-filter: blur(9px);
+    }
+
+    .menu img {
+        height: 80px;
+        width: 80px;
+        border-radius: 13px 13px 13px 13px;
+        margin-bottom: -60px;
+    }
+
+    .menu h1 {
+        margin-left: 100px;
+        margin-top: -1px;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: right;
+        margin: -73px 0 0;
+    }
+
+    .menu ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin-right: 20px;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        font-size: 1.1em;
+        color: #000000;
+    }
+
+    .huge_title_1 {
+        font-size: 9em;
+        color: #0b303b;
+        margin-top: 100px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        transition-property: color;
+        transition-duration: 1.5s;
+        transition-delay: 0.2s;
+    }
+
+    .huge_title_1:hover {
+        color: #1c5c70;
+        border-radius: 80px 80px 80px;
+        opacity: 95%;
+    }
+
+    .huge_title_2 {
+        font-size: 6em;
+        color: #0b303b;
+        margin-top: 100px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        transition-property: color;
+        transition-duration: 1.5s;
+        transition-delay: 0.2s;
+    }
+    .huge_title_2:hover {
+        color: #1c5c70;
+        border-radius: 80px 80px 80px;
+        opacity: 95%;
+    }
+    .small_card {
+        backdrop-filter: blur(19px) saturate(107%);
+        -webkit-backdrop-filter: blur(19px) saturate(107%);
+        background-color: rgba(17, 25, 40, 0.5);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        height: 250px;
+        width: 500px;
+        margin: 0 40px 0 40px;
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: 400;
+        font-synthesis: style;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+    }
+    .hitokoto{
+        font-size: 1.9em;
+        color: #0b303b;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin-top: 40px
+        transition-property: color;
+        transition-duration: 1.5s;
+        transition-delay: 0.2s;
+    }
+    .hitokoto:hover{
+        color: #1c5c70;
+        border-radius: 80px 80px 80px;
+        opacity: 95%;
+    }
+
+
+    /*卡片*/
+
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    }
+    .container .box {
+        position: relative;
+        width: 320px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 30px;
+    }
+
+    .container .box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        transform: skewX(15deg);
+        transition: 0.5s;
+    }
+
+    .container .box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        transform: skewX(15deg);
+        filter: blur(30px);
+        transition: 0.5s;
+    }
+
+    .container .box:nth-child(3):before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        transform: skewX(-15deg);
+        transition: 0.5s;
+    }
+
+    .container .box:nth-child(3):after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        transform: skewX(-15deg);
+        filter: blur(30px);
+        transition: 0.5s;
+    }
+
+    .container .box:nth-child(4):before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        transform: skewX(-15deg);
+        transition: 0.5s;
+    }
+
+    .container .box:nth-child(4):after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        transform: skewX(-15deg);
+        filter: blur(30px);
+        transition: 0.5s;
+    }
+
+    .container .box:hover:before,
+    .container .box:hover:after {
+        transform: skewX(0deg);
+        left: 20px;
+        width: calc(100% - 90px);
+    }
+
+    .container .box:nth-child(1)::before,
+    .container .box:nth-child(1):after {
+        background-image: linear-gradient(315deg, #ffbc00, #ff0058);
+    }
+
+    .container .box:nth-child(2)::before,
+    .container .box:nth-child(2):after {
+        background-image: linear-gradient(315deg, #03a9f4, #ff0058);
+    }
+
+    .container .box:nth-child(3)::before,
+    .container .box:nth-child(3):after {
+        background-image: linear-gradient(315deg, #4dff03, #00d0ff);
+    }
+
+    .container .box:nth-child(4)::before,
+    .container .box:nth-child(4):after {
+        background-image: linear-gradient(315deg, #a6c0fe , #f68084);
+    }
+
+    .container .box span {
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 20;
+    }
+
+    .container .box span::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        transition: 0.5s;
+        animation: animate 2s ease-in-out infinite;
+    }
+
+    .container .box:hover span::before {
+        top: -50px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+
+    @keyframes animate {
+        0%,
+        100% {
+            transform: translateY(10px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .container .box span::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        transition: 0.5s;
+        animation: animate 2s ease-in-out infinite;
+        animation-delay: -1s;
+    }
+
+    .container .box:hover span::after {
+        bottom: -50px;
+        right: 50px;
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+
+    .container .box .content {
+        z-index: 1;
+        position: relative;
+        left: 0;
+        color: #fff;
+        padding: 20px 40px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        transition: 0.5s;
+    }
+
+    .container .box:hover .content {
+        left: -25px;
+        padding: 60px 40px;
+    }
+
+    .container .box .content h2 {
+        font-size: 1.4em;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .container .box .content p {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        line-height: 1.2em;
+    }
+
+    .container .box .content a {
+        color: #111;
+        background-color: #fff;
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 4px;
+        font-weight: 700;
+    }
+
+    .info_card {
+        align-content: center;
+        display: grid;
+        height: 80%;
+        width: 92%;
+        margin: auto auto auto auto;
+        grid-template-columns: 40% auto;
+        grid-template-rows: 80% 20%;
+        border-radius: 30px;
+        gap: 10px;
+        background-color: #fef4ee90;
+        padding: 10px;
+    }
+
+    .card-title {
+        align-content: center;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .card-title h1{
+        align-content: center;
+        display: flex;
+        font-size: 4.8em;
+        color: #0b303b;
+    }
+
+    .card-title p {
+        align-content: center;
+        display: flex;
+        font-size: 1.4em;
+        color: #0b303b;
+    }
+    .card-button {
+        align-content: center;
+        grid-row: 2;
+        grid-column: 1;
+        padding: 0 0 0 0;
+    }
+    .card-button button {
+        width: 50%;
+        height: 50%;
+        margin: auto 24% auto 24%;
+        border-radius: 50px;
+        background-color: #fef4ee;
+        font-size: 1.5em;
+        border-style: none;
+        outline: none;
+        color: #0b303b;
+        transition-property: width, height, margin;
+        transition-duration: 1.2s;
+        transition-delay: 0.2s;
+        transform-style: flat;
+    }
+    .card-button button:hover {
+        width: 54%;
+        height: 54%;
+        margin: auto 22% auto 22%;
+        border-radius: 50px;
+        background-color: #fef4ee;
+        font-size: 1.5em;
+        border-style: none;
+        outline: none;
+        color: #0b303b;
+    }
+</style>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <nav class="menu">
+        <img src="icon.png" alt="">
+        <h1>八年级五班</h1>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">每日作业</a></li>
+            <li><a href="#">班级图库</a></li>
+            <li><a href="#">文案投稿</a></li>
+            <li><a href="#">关于</a></li>
+            <li><a href="#">敬请期待…</a></li>
+        </ul>
+    </nav> <!--顶部导航栏-->
+    <div>
+        <h1 class="huge_title_1">杨村十中</h1>
+        <h1 class="huge_title_1">八五班 班级网站</h1>
+        <nav>
+            <h1 id="hitokoto" class="hitokoto">
+                <a id="hitokoto_text">正在获取一言...</a>
+            </h1>
+            <script>
+                fetch('https://v1.hitokoto.cn')
+                .then(response => response.json())
+                .then(data => {
+                const hitokoto = document.querySelector('#hitokoto_text')
+                hitokoto.innerText = data.hitokoto
+                })
+                .catch(console.error)
+            </script>
+        </nav>
+        <h1 style="font-size: 0.9em;
+            color: #0b303b;
+            text-align: right;
+            font-family: Arial, sans-serif;
+            margin-right: 17px;
+            margin-top: 20px">designed by Wemsur</h1>
+        <br>
+        <br>
+    </div> <!--第一页内容-->
+    <div style="margin-top: 20px"> <!--第二页：班级风貌-->
+        <h1 class="huge_title_2">班级风貌</h1>
+        <div class="container">
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>团结协作</h2>
+                    <p>
+                        同学们互相团结互助，共同为班级进步而努力，为班级争得璀璨荣誉。每个同学都在集体中找到自己的位置，发挥自己的特长，共同创造一个和谐、温暖、有爱的学习环境。
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>积极向上</h2>
+                    <p>
+                        我们班级积极向上，充满活力，每个同学都努力追求进步，勇于挑战自我。在这里，我们共同成长，彼此激励，营造出一个奋发向上的学习氛围。
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>顽强努力</h2>
+                    <p>
+                        我们班级顽强努力，坚韧不拔，每个同学在学习和生活中都不畏困难，迎难而上。大家相互支持，相互鼓励，奋勇拼搏，共同打造出一个坚韧有力的集体。
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>自律创新</h2>
+                    <p>
+                        我们班级自律创新，每个同学都严格要求自己，遵守班级规章制度，同时勇于探索，追求新知。在自律中成长，在创新中进步，共同营造出一个充满活力和创造力的教学环境。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="info_card">
+        <div class="card-title">
+            <h1>班级图库</h1>
+            <p>
+                这里记录了同学们奋力拼搏的瞬间，承载着无数美好的回忆：有操场上挥洒的汗水，有教室中努力学习的身影……
+                <br>
+                来这里，共忆从前的美好青春时光!
+            </p>
+        </div>
+        <div class="card-button">
+            <a href="photos.html">
+                <button >
+                    班级图库
+                </button>
+            </a>
+        </div>
+    </div><!--第三页：班级图库-->
+    <br>
+    <br>
+</body>
+</html>
