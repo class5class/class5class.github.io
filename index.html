@@ -380,11 +380,22 @@
         padding: 10px;
     }
 
+    .info_card2 {
+        align-content: center;
+        display: grid;
+        height: auto;
+        width: 92%;
+        margin: 250px auto 100px;
+        grid-template-columns: 2fr 1fr;
+        border-radius: 30px;
+        gap: 20px;
+        background-color: #fef4ee90;
+        padding: 10px;
+    }
+
     .card-title {
         align-content: center;
         margin-left: 15px;
-        grid-row: 1;
-        grid-column: 1;
     }
 
     .card-title h1{
@@ -556,7 +567,27 @@
             <img src="photos/6.jpg" alt="图片">
         </div>
     </div><!--第三页：班级图库-->
-    <br>
+
+    <div class="info_card2">
+        <div class="in_photo">
+            <img src="homeworks.jpeg" alt="图片">
+        </div>
+        <div class="card-title">
+            <h1>每日作业</h1>
+            <p>
+                你是否还在为了难以记住作业而苦恼？这里记录着最新的作业！
+                <br>
+                更新可能不及时，可在同学群内提醒！
+            </p>
+            <div class="card-button">
+                <a href="homeworks.html">
+                    <button >
+                        每日作业
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div><!--第四页：每日作业-->
     <br>
 </body>
 </html>
