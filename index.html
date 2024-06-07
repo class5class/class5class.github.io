@@ -11,11 +11,12 @@
         --color-2: #beb9f2;
         --text-color: #0b303b;
     }
-    :root .dark {
+
+    /*:root .dark {
         --color-1: #332d2f;
         --color-2: #202029;
         --text-color: #d5ecf3;
-    }
+    }*/
 
     ::-webkit-scrollbar {
         width: 0;
@@ -27,6 +28,7 @@
         margin: 0 0;
         padding: 0 0;
     }
+
     html.background {
         position:absolute;
         width:100%;
@@ -35,7 +37,10 @@
         background-repeat: repeat-y;
         background-size:100% 600%;
     }
+
     .menu {
+        display: flex;
+        align-items: center;
         z-index: 100;
         position: fixed;
         background-color: #fef4ee35;
@@ -54,19 +59,17 @@
         height: 80px;
         width: 80px;
         border-radius: 13px 13px 13px 13px;
-        margin-bottom: -60px;
     }
 
     .menu h1 {
-        margin-left: 100px;
-        margin-top: -1px;
+        margin-left: 10px;
     }
 
     .menu ul {
         list-style-type: none;
         padding: 0;
         text-align: right;
-        margin: -73px 0 0;
+        margin-left: auto;
     }
 
     .menu ul li {
@@ -113,37 +116,19 @@
         border-radius: 80px 80px 80px;
         opacity: 95%;
     }
-    .small_card {
-        backdrop-filter: blur(19px) saturate(107%);
-        -webkit-backdrop-filter: blur(19px) saturate(107%);
-        background-color: rgba(17, 25, 40, 0.5);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.125);
-        height: 250px;
-        width: 500px;
-        margin: 0 40px 0 40px;
-        line-height: 24px;
-        font-size: 16px;
-        font-weight: 400;
-        font-synthesis: style;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        padding: 24px;
-    }
-    .hitokoto{
+
+    .hit_text{
         font-size: 1.9em;
         color: #0b303b;
         text-align: center;
         font-family: Arial, sans-serif;
-        margin-top: 40px
+        margin-top: 40px;
         transition-property: color;
         transition-duration: 1.5s;
         transition-delay: 0.2s;
     }
-    .hitokoto:hover{
+
+    .hit_text:hover{
         color: #1c5c70;
         border-radius: 80px 80px 80px;
         opacity: 95%;
@@ -153,12 +138,13 @@
     /*卡片*/
 
     .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 40px 0;
     }
+
     .container .box {
         position: relative;
         width: 320px;
@@ -387,16 +373,17 @@
         height: 80%;
         width: 92%;
         margin: auto auto auto auto;
-        grid-template-columns: 40% auto;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: 80% 20%;
         border-radius: 30px;
-        gap: 10px;
+        gap: 20px;
         background-color: #fef4ee90;
         padding: 10px;
     }
 
     .card-title {
         align-content: center;
+        margin-left: 15px;
         grid-row: 1;
         grid-column: 1;
     }
@@ -455,7 +442,7 @@
     <br>
     <br>
     <br>
-    <nav class="menu">
+    <div class="menu">
         <img src="icon.png" alt="">
         <h1>八年级五班</h1>
         <ul>
@@ -466,16 +453,16 @@
             <li><a href="#">关于</a></li>
             <li><a href="#">敬请期待…</a></li>
         </ul>
-    </nav> <!--顶部导航栏-->
+    </div> <!--顶部导航栏-->
     <div>
         <h1 class="huge_title_1">杨村十中</h1>
         <h1 class="huge_title_1">八五班 班级网站</h1>
         <nav>
-            <h1 id="hitokoto" class="hitokoto">
+            <h1 id="hitokoto" class="hit_text">
                 <a id="hitokoto_text">正在获取一言...</a>
             </h1>
             <script>
-                fetch('https://v1.hitokoto.cn')
+                fetch('https://v1.hitokoto.cn/?c=d&c=e&c=f&c=g&c=h&c=i&c=j&c=k&c=l')
                 .then(response => response.json())
                 .then(data => {
                 const hitokoto = document.querySelector('#hitokoto_text')
@@ -554,5 +541,6 @@
     </div><!--第三页：班级图库-->
     <br>
     <br>
+    <script src = "./css_js/dist.js"></script>
 </body>
 </html>
