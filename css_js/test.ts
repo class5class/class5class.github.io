@@ -1,0 +1,18 @@
+font-family: sans-serif;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+outline: #fff 0 solid;
+color: #ffff;
+display: block;
+height: 1.8em;
+padding: 0 1em;
+margin: 5px 8px;
+font-size: 16pt;
+line-height: 1.8em;
+font-weight: bold;
+word-break: keep-all;
+background-color: #fff4;
+border-radius: 5px;
+backdrop-filter: blur(5px);
+transition: 0.3s;
