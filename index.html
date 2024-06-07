@@ -370,11 +370,10 @@
     .info_card {
         align-content: center;
         display: grid;
-        height: 80%;
+        height: auto;
         width: 92%;
         margin: auto auto auto auto;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 80% 20%;
         border-radius: 30px;
         gap: 20px;
         background-color: #fef4ee90;
@@ -402,15 +401,19 @@
         color: #0b303b;
     }
     .card-button {
-        align-content: center;
+        display: flex;
+        align-items: center;
         grid-row: 2;
         grid-column: 1;
         padding: 0 0 0 0;
+        margin-top: 35px;
+        margin-bottom: 50px;
+        margin-left: 20px;
     }
     .card-button button {
-        width: 50%;
-        height: 50%;
-        margin: auto 24% auto 24%;
+        width: 200px;
+        height: 70px;
+        margin: auto auto auto auto;
         border-radius: 50px;
         background-color: #fef4ee;
         font-size: 1.5em;
@@ -423,15 +426,25 @@
         transform-style: flat;
     }
     .card-button button:hover {
-        width: 54%;
-        height: 54%;
-        margin: auto 22% auto 22%;
+        width: 220px;
+        height: 80px;
+        margin: auto auto auto auto;
         border-radius: 50px;
         background-color: #fef4ee;
         font-size: 1.5em;
         border-style: none;
         outline: none;
         color: #0b303b;
+    }
+
+    .in_photo img{
+        margin-top: 4.3%;
+        border-radius: 20px;
+        width: 90%;
+        height: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        object-fit: cover;
     }
 </style>
 
@@ -530,13 +543,17 @@
                 <br>
                 来这里，共忆从前的美好青春时光!
             </p>
+            <div class="card-button">
+                <a href="photos.html">
+                    <button >
+                        班级图库
+                    </button>
+                </a>
+            </div>
         </div>
-        <div class="card-button">
-            <a href="photos.html">
-                <button >
-                    班级图库
-                </button>
-            </a>
+
+        <div class="in_photo">
+            <img src="photos/6.jpg" alt="图片">
         </div>
     </div><!--第三页：班级图库-->
     <br>
