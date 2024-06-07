@@ -133,17 +133,17 @@
         flex-direction: column;
         padding: 24px;
     }
-    .hitokoto{
+    .hit_text{
         font-size: 1.9em;
         color: #0b303b;
         text-align: center;
         font-family: Arial, sans-serif;
-        margin-top: 40px
+        margin-top: 40px;
         transition-property: color;
         transition-duration: 1.5s;
         transition-delay: 0.2s;
     }
-    .hitokoto:hover{
+    .hit_text:hover{
         color: #1c5c70;
         border-radius: 80px 80px 80px;
         opacity: 95%;
@@ -153,11 +153,11 @@
     /*卡片*/
 
     .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 40px 0;
     }
     .container .box {
         position: relative;
@@ -406,6 +406,8 @@
         display: flex;
         font-size: 4.8em;
         color: #0b303b;
+        text-align: center;
+        margin: auto 40px auto 20px;
     }
 
     .card-title p {
@@ -413,6 +415,8 @@
         display: flex;
         font-size: 1.4em;
         color: #0b303b;
+        text-align: center;
+        margin: auto 10%;
     }
     .card-button {
         align-content: center;
@@ -456,28 +460,28 @@
 </style>
 
 <body>
-    <br>
-    <br>
-    <br>
-    <nav class="menu">
-        <img src="icon.png" alt="">
-        <h1>八年级五班</h1>
-        <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="#">每日作业</a></li>
-            <li><a href="photos.html">班级图库</a></li>
-            <li><a href="#">文案投稿</a></li>
-            <li><a href="#">关于</a></li>
-            <li><a href="#">敬请期待…</a></li>
-        </ul>
-    </nav> <!--顶部导航栏-->
-    <div style="margin-top: 20px"> <!--第二页：班级风貌-->
-        <h1 class="huge_title_2">班级图库</h1>
-    </div>
-    <div style="margin-top: 50px;"></div>
-    <div class="photos"><img alt="" src="icon.png"></div>
+<br>
+<br>
+<br>
+<nav class="menu">
+    <img src="icon.png" alt="">
+    <h1>八年级五班</h1>
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="homeworks.html">每日作业</a></li>
+        <li><a href="photos.html">班级图库</a></li>
+        <li><a href="#">文案投稿</a></li>
+        <li><a href="#">关于</a></li>
+        <li><a href="#">敬请期待…</a></li>
+    </ul>
+</nav> <!--顶部导航栏-->
+<div style="margin-top: 20px"> <!--第二页：班级风貌-->
+    <h1 class="huge_title_2">班级图库</h1>
+</div>
+<div style="margin-top: 50px;"></div>
+<div class="photos"><img alt="" src="icon.png"></div>
 
-    <br>
-    <br>
+<br>
+<br>
 </body>
 </html>
