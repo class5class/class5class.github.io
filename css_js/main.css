@@ -467,3 +467,15 @@ html.background {
     border-radius: 30px;
     margin: 30px 5% 30px 5%;
 }
+
+@media screen and (max-width: 620px) {
+    .menu ul{
+        display: none;
+    }
+    .huge_title_1 {
+        font-size: 4.5em;
+    }
+    .huge_title_2 {
+        font-size: 3em;
+    }
+}
