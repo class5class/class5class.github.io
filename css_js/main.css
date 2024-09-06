@@ -45,6 +45,10 @@ html.background {
     padding: 10px 10px 10px 10px;
     border-radius: 20px 20px 20px 20px;
     backdrop-filter: blur(9px);
+    -webkit-box-shadow:9px 8px 21px 0px rgba(62,66,66,0.26);
+    -moz-box-shadow: 9px 8px 21px 0px rgba(62,66,66,0.26);
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .menu img {
@@ -85,12 +89,14 @@ html.background {
     transition-property: color;
     transition-duration: 1.5s;
     transition-delay: 0.2s;
+    text-shadow: rgba(22,60,74,0.4) 4px 4px 10px;
 }
 
 .huge_title_1:hover {
     color: #1c5c70;
     border-radius: 80px 80px 80px;
     opacity: 95%;
+    text-shadow: rgba(51,112,133,0.4) 4px 4px 10px;
 }
 
 .huge_title_2 {
@@ -102,11 +108,13 @@ html.background {
     transition-property: color;
     transition-duration: 1.5s;
     transition-delay: 0.2s;
+    text-shadow: rgba(22,60,74,0.4) 4px 4px 10px;
 }
 .huge_title_2:hover {
     color: #1c5c70;
     border-radius: 80px 80px 80px;
     opacity: 95%;
+    text-shadow: rgba(51,112,133,0.4) 4px 4px 10px;
 }
 
 .hit_text{
@@ -114,6 +122,7 @@ html.background {
     color: #0b303b;
     text-align: center;
     font-family: Arial, sans-serif;
+    text-shadow: rgba(22,60,74,0.4) 4px 4px 10px;
     margin-top: 40px;
     opacity: 0; /* 初始设置透明度为0，用于后续的淡入效果 */
     transition: opacity 0.5s ease; /* 过渡属性设置为透明度，时间为0.5秒，缓动效果 */
@@ -379,8 +388,26 @@ html.background {
     grid-template-columns: 1fr 2fr;
     border-radius: 30px;
     gap: 20px;
-    background-color: #fef4ee90;
+    background-color: rgba(254, 244, 238, 0.56);
     padding: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-box-shadow:10px 10px 19px 8px rgba(62,66,66,0.16);
+    -moz-box-shadow: 10px 10px 19px 8px rgba(62,66,66,0.16);
+    box-shadow: 10px 10px 19px 8px rgba(62,66,66,0.16);
+    transition-property: width, height, margin;
+    transition-duration: 1.2s;
+    transition: 0.5s;
+    transform-style: flat;
+}
+
+.info_card:hover{
+    -webkit-box-shadow:18px 18px 36px 8px rgba(86,89,89,0.15);
+    -moz-box-shadow: 18px 18px 36px 8px rgba(86,89,89,0.15);
+    box-shadow: 18px 18px 36px 8px rgba(86,89,89,0.15);
+    background-color: rgba(254, 244, 238, 0.65);
+    backdrop-filter: blur(10px);
+    width: 93%;
+    height: auto;
 }
 
 .info_card2 {
@@ -394,6 +421,24 @@ html.background {
     gap: 20px;
     background-color: #fef4ee90;
     padding: 10px;
+    backdrop-filter: blur(5px);
+    transition-property: width, height, margin;
+    transition-duration: 1.2s;
+    transition: 0.5s;
+    transform-style: flat;
+    -webkit-box-shadow:-10px 10px 19px 8px rgba(62,66,66,0.16);
+    -moz-box-shadow: -10px 10px 19px 8px rgba(62,66,66,0.16);
+    box-shadow: -10px 10px 19px 8px rgba(62,66,66,0.16);
+}
+
+.info_card2:hover{
+    -webkit-box-shadow:-18px 18px 36px 8px rgba(86,89,89,0.15);
+    -moz-box-shadow: -18px 18px 36px 8px rgba(86,89,89,0.15);
+    box-shadow: -18px 18px 36px 8px rgba(86,89,89,0.15);
+    background-color: rgba(254, 244, 238, 0.65);
+    backdrop-filter: blur(10px);
+    width: 93%;
+    height: auto;
 }
 
 .card-title {
@@ -438,17 +483,23 @@ html.background {
     transition-duration: 1.2s;
     transition: 0.5s;
     transform-style: flat;
+    -webkit-box-shadow:6px 6px 21px 4px rgba(86,89,89,0.15);
+    -moz-box-shadow: 6px 6px 21px 4px rgba(86,89,89,0.15);
+    box-shadow: 6px 6px 21px 4px rgba(86,89,89,0.15);
 }
 .card-button button:hover {
     width: 220px;
     height: 80px;
+    font-size: 1.8em;
     margin: auto auto auto auto;
     border-radius: 50px;
     background-color: #fef4ee;
-    font-size: 1.5em;
     border-style: none;
     outline: none;
     color: #0b303b;
+    -webkit-box-shadow:14px 13px 28px 4px rgba(86,89,89,0.13);
+    -moz-box-shadow: 14px 13px 28px 4px rgba(86,89,89,0.13);
+    box-shadow: 14px 13px 28px 4px rgba(86,89,89,0.13);
 }
 
 .in_photo img{
@@ -479,3 +530,4 @@ html.background {
         font-size: 3em;
     }
 }
+
