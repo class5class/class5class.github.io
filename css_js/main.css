@@ -141,12 +141,12 @@ body{
     transition-property: color, text-shadow;
 }
 
-#hitokoto_text{
+/*#hitokoto_text{
     transition-property: color, text-shadow;
     transition-duration: 1.5s;
     transition-delay: 0.2s;
     transition-timing-function: ease;
-}
+}*/
 
 /*
 #hitokoto_text:hover{
