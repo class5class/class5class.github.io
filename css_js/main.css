@@ -522,11 +522,23 @@ body{
     object-fit: cover;
 }
 
-.photos img {
-    width: 89.6%;
+.photos{
+    text-align: center;
+}
+
+.photos img{
+    width: 88%;
     height: auto;
     border-radius: 30px;
-    margin: 30px 5% 30px 5%;
+    margin: 30px auto 30px auto;
+    transition-property: transform;
+    transition-duration: 0.8s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease;
+}
+
+.photos img:hover{
+    transform: scale(102%);
 }
 
 .ho-link{
@@ -574,21 +586,20 @@ body{
 
 #fade.hiding{
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(100px) scale(90%);
 }
 
 #fade2.hiding2{
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(100px) scale(90%);
 }
 
 #fade3.hiding3{
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(100px) scale(90%);
 }
 
 #fade4.hiding4{
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(100px) scale(90%);
 }
-
