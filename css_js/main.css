@@ -44,8 +44,8 @@ body{
     padding: 10px 10px 10px 10px;
     border-radius: 20px 20px 20px 20px;
     backdrop-filter: blur(9px);
-    -webkit-box-shadow:9px 8px 21px 0px rgba(62,66,66,0.26);
-    -moz-box-shadow: 9px 8px 21px 0px rgba(62,66,66,0.26);
+    -webkit-box-shadow:9px 8px 21px 0 rgba(62,66,66,0.26);
+    -moz-box-shadow: 9px 8px 21px 0 rgba(62,66,66,0.26);
     -webkit-backdrop-filter: blur( 4px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     left: 50%;
@@ -572,15 +572,23 @@ body{
     }
 }
 
-@keyframes float {
-    0% {
-        transform: translate(0, 100px);
-        opacity: 0;
-    }
+#fade.hiding{
+    opacity: 0;
+    transform: translateY(100px);
+}
 
-    100% {
-        transform: translate(0, 0px);
-        opacity: 1;
-    }
+#fade2.hiding2{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+#fade3.hiding3{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+#fade4.hiding4{
+    opacity: 0;
+    transform: translateY(100px);
 }
 
