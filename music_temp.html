@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="zh_CMN_Hans">
+<head>
+    <meta charset="utf-8">
+    <title>精致版播放器</title>
+</head>
+<style>
+    @import "css_js/main.css";
+</style>
+
+<body>
+    <div class="music" id="Bplay">
+        <svg class="icon" height="200" id="bofang" p-id="6029" style="display: block;" t="1727587107590" version="1.1" viewBox="0 0 1024 1024" width="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M310.031079 82.077344c-7.4159-8.485255-18.295692-13.873985-30.467919-13.873985-8.886391 0-17.09126 2.89698-23.752983 7.736195-1.947352 1.36816-3.796466 2.868327-5.525853 4.611018-9.985422 9.999748-11.395538 22.074761-11.230786 36.83493l0 793.82876c-0.528026 12.06171 1.245364 26.824949 11.230786 36.836977 15.941064 16.019859 41.810245 16.019859 57.750285 0l525.992689-404.133294c8.151657-8.163937 12.116969-18.914792 11.95631-29.624714 0.160659-10.709923-3.806699-21.461801-11.95631-29.625738L310.031079 82.077344 310.031079 82.077344 310.031079 82.077344z" fill="#272536" p-id="6030"></path>
+        </svg>
+        <svg class="icon" height="200" id="zanting" p-id="5882" style="display: none;" t="1727587074882" version="1.1" viewBox="0 0 1024 1024" width="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M379.337561 118.348432 145.347343 118.348432c-8.113795 0-16.247033 3.097548-22.444175 9.295714-6.197142 6.1777-9.295714 14.309914-9.295714 22.424732l0 729.759559c0 8.094352 3.098571 16.22759 9.295714 22.424732 6.197142 6.176676 14.33038 9.276271 22.444175 9.276271l233.990219 0c8.113795 0 16.247033-3.098571 22.444175-9.276271 6.1777-6.197142 9.275247-14.33038 9.275247-22.424732l0-729.760582c0-8.112772-3.098571-16.247033-9.275247-22.424732C395.584594 121.447003 387.451356 118.348432 379.337561 118.348432L379.337561 118.348432zM897.531634 127.643122c-6.197142-6.197142-14.33038-9.295714-22.444175-9.295714L641.09724 118.347408c-8.113795 0-16.247033 3.098571-22.444175 9.295714-6.196119 6.1777-9.295714 14.31196-9.295714 22.424732l0 729.759559c0 8.094352 3.099594 16.22759 9.295714 22.424732 6.197142 6.176676 14.33038 9.275247 22.444175 9.275247l233.990219 0c8.113795 0 16.247033-3.098571 22.444175-9.275247 6.197142-6.197142 9.275247-14.33038 9.275247-22.424732L906.806881 150.067854C906.806881 141.954059 903.727753 133.821845 897.531634 127.643122L897.531634 127.643122z" fill="#272536" p-id="5883"></path>
+        </svg>
+        <!--<img style="display: block;" id="bofang" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQEfOnNphlxqfbNPCfb_ty_6WrtonnRpgZZQ&s" alt="">
+        <img style="display: none;" id="zanting" src="https://png.pngtree.com/png-vector/20190501/ourmid/pngtree-vector-pause-icon-png-image_1019793.jpg" alt="">
+ -->
+    </div>
+    <audio id="audiO" src="梦然%20-%20是你.flac"></audio>
+</body>
+
+<script>
+    let audiO = document.getElementById("audiO");//获取audio的id
+    let Play = document.getElementById("Bplay");//播放
+    let bofang = document.getElementById("bofang");//播放img
+    let zanting = document.getElementById("zanting");//暂停img
+    let onFout = true;//播放标记
+    // 播放歌曲
+    Play.onclick = function(){
+        if(onFout==true){
+            audiO.play();
+            bofang.style="display: none;"
+            zanting.style="display: block;"
+            /*timer =setInterval(ProgressTime,1000);//每一秒执行一次*/
+            onFout = false;
+        }else{
+            audiO.pause();
+            bofang.style="display: block;"
+            zanting.style="display: none;"
+            onFout = true;
+        }
+    }
+</script>
+</html>

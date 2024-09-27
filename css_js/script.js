@@ -41,3 +41,23 @@ function temp4() {
     requestAnimationFrame(temp4);
 }
 requestAnimationFrame(temp4)
+
+let audiO = document.getElementById("audiO");//获取audio的id
+let Play = document.getElementById("Bplay");//播放
+let bofang = document.getElementById("bofang");//播放img
+let zanting = document.getElementById("zanting");//暂停img
+let onFout = true;//播放标记
+audiO.play();
+Play.onclick = function (){
+    if(onFout===true){
+        audiO.play();
+        bofang.style="display: none;"
+        zanting.style="display: block;"
+        onFout = false;
+    }else{
+        audiO.pause();
+        bofang.style="display: block;"
+        zanting.style="display: none;"
+        onFout = true;
+    }
+}
