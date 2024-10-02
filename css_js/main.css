@@ -623,6 +623,34 @@ audio {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .menu h1 {
+        display: none;
+    }
+    .menu img {
+        display: none;
+    }
+    .menu{
+        height: 40px;
+        top:10px;
+    }
+    .menu ul li a{
+        font-size: 0.8em;
+    }
+    .container {
+    ;
+    }
+    .huge_title_1 {
+        font-size: 4.5em;
+    }
+    .huge_title_2 {
+        font-size: 3em;
+    }
+    .info_card {
+        display: flex
+    }
+}
+
 #fade.hiding{
     opacity: 0;
     transform: translateY(100px) scale(90%);
