@@ -1,7 +1,7 @@
 :root {
-    --color-1: #e8ccd5;
-    --color-2: #beb9f2;
-    --text-color: #0b303b;
+    --color-1: rgb(255, 70, 114);
+    --color-2: rgb(239, 99, 75);
+    --text-color: #870404;
 }
 
 /*:root .dark {
@@ -87,7 +87,7 @@ body{
 }
 
 .menu ul li a:hover {
-    color: #1c5c70;
+    color: #6a0707;
 }
 
 .music-control {/*
@@ -115,7 +115,7 @@ audio {
 
 .huge_title_1 {
     font-size: 7.7em;
-    color: #0b303b;
+    color: #333333;
     margin-top: 100px;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -127,15 +127,15 @@ audio {
 }
 
 .huge_title_1:hover {
-    color: #1c5c70;
+    color: #3e0000;
     border-radius: 80px 80px 80px;
     opacity: 95%;
-    text-shadow: rgba(51,112,133,0.4) 4px 4px 10px;
+    text-shadow: #430000 4px 4px 10px;
 }
 
 .huge_title_2 {
     font-size: 6em;
-    color: #0b303b;
+    color: #333333;
     margin-top: 100px;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -154,7 +154,7 @@ audio {
 
 .hit_text{
     font-size: 1.9em;
-    color: #0b303b;
+    color: #333333;
     text-align: center;
     font-family: Arial, sans-serif;
     text-shadow: rgba(22,60,74,0.4) 4px 4px 10px;
@@ -566,7 +566,7 @@ audio {
 
 .ho-link{
     font-size: 2.2em;
-    color: #0b303b;
+    color: #870404;
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-color: rgba(11,48,59,0);
@@ -582,13 +582,13 @@ audio {
 }
 
 .ho-link:hover{
-    color: #1c5c70;
+    color: #870404;
     border-radius: 80px 80px 80px;
     opacity: 95%;
-    text-shadow: rgba(51,112,133,0.4) 4px 4px 10px;
+    text-shadow: #870404 4px 4px 10px;
     text-decoration-line: underline;
     text-decoration-style: solid;
-    text-decoration-color: #1c5c70;
+    text-decoration-color: #870404;
     text-decoration-thickness: 7px;
     text-align: left;
 }
